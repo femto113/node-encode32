@@ -19,7 +19,7 @@ var aliases = {
 };
 
 var encode_table = digits.split('');
-var decode_table = new Uint8Array(256);
+var decode_table = new Array(256);
 for (var c = 0; c < 256; c++) {
   s = String.fromCharCode(c);
   if (s in aliases) s = aliases[s];
