@@ -1,7 +1,7 @@
 {
   "name": "encode32",
   "description": "an encoding for 32-bit numbers inspired by Crockford Base32",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Ken Woodruff <ken.woodruff@gmail.com>",
   "repository": "http://github.com/femto113/node-encode32.git",
   "main": "encode32.js",
