@@ -24,7 +24,7 @@ for (var c = 0; c < 256; c++) {
   s = String.fromCharCode(c);
   if (s in aliases) s = aliases[s];
   var i = digits.indexOf(s.toUpperCase());
-  decode_table[c] = i > 0 ? i: NaN;
+  decode_table[c] = i >= 0 ? i : NaN;
 }
 
 // convert a number to an array of words of given size using string conversion magic
