@@ -7,15 +7,15 @@ http://www.crockford.com/wrmg/base32.html
 This encoding is designed to balance compactness with human-friendliness and robustness.
 It uses 32 digits, the standard numbers and 22 alphabetic characters.
 It is case insensitive and characters easily confused by humans are accepted as aliases for
-some digits (e.g. l and I for 1, o for 0, etc).  U is excluded so you can avoid
-winding up with certain common obscenities.
+some digits (e.g. l and I for 1, o for 0, etc).  U is excluded so you can avoid certain common
+obscenities.
 
 A 32-bit unsigned integer will encode into 7 base-32 (5-bit) digits (left padded
 with 0 as needed).  Rather than use an additional check character as suggested in
 the original source, we fill the otherwise unused bits of the final character to
-with a 3-bit parity checksum.  This feature makes it incompatible with other encoding
-schemes, but allows for quick sanity checks for transcribed numbers without the increased
-length or additional alphabet required by Crockford's "mod 37 checksum" approach.
+with a 3-bit parity checksum.  This feature makes it incompatible with other implementations
+of this encoding scheme, but allows for quick sanity checks for transcribed numbers without
+the increased length or additional alphabet required by Crockford's "mod 37 checksum" approach.
 
 ## Install
 
@@ -49,8 +49,6 @@ or
       "0XDT16"   // missing digit
     ].map(function (s) { return enc.decode32(s); });
     // c == [NaN, NaN, NaN]
-
-    console.log(a, b, c);
 
 ## TODO
 
