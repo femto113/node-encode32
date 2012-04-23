@@ -49,13 +49,13 @@
 It uses 32 digits, the standard numbers and 22 alphabetic characters.
 It is case insensitive and characters easily confused by humans are accepted as aliases for
 some digits (e.g. l and I for 1, o for 0, etc).  U is excluded so you can avoid
-winding up with certain common obscenities.</p>
+certain common obscenities.</p>
 
 <p>A 32-bit unsigned integer will encode into 7 base-32 (5-bit) digits (left padded
 with 0 as needed).  Rather than use an additional check character as suggested in
 the original source, we fill the otherwise unused bits of the final character to
-with a 3-bit parity checksum.  This feature makes it incompatible with other encoding
-schemes, but allows for quick sanity checks for transcribed numbers without the increased
+with a 3-bit parity checksum.  This feature makes it incompatible with other implementations
+of this encoding scheme, but allows for quick sanity checks for transcribed numbers without the increased
 length or additional alphabet required by Crockford's "mod 37 checksum" approach.</p>
 
 <h2>Install</h2>
@@ -93,7 +93,6 @@ var c = [
 ].map(function (s) { return enc.decode32(s); });
 // c == [NaN, NaN, NaN]
 
-console.log(a, b, c);
 </code></pre>
       </section>
 
