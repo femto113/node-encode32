@@ -1,4 +1,4 @@
-# encode32
+# encode32 [![Build Status](https://secure.travis-ci.org/femto113/node-encode32.png)](http://travis-ci.org/femto113/node-encode32)
 
 This is a Base-32 encoding for 32-bit numbers inspired by Douglas Crockford
 
